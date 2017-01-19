@@ -1,0 +1,105 @@
+.at-arrowzex-latest-news{
+	padding: 30px 0 60px;
+}
+.at-arrowzex-latest-news .at-item-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+	background-repeat: no-repeat;
+	padding: 20px;
+	background-size: cover;
+	background-position: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;	
+}
+.at-arrowzex-latest-news .at-item-image{
+	background-color: gray;
+}
+.at-arrowzex-latest-news .at-image-intro-item{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+	border: 4px solid transparent;
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-ms-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;	
+}
+.at-arrowzex-latest-news .at-intro-item-wrap:hover .at-item-image{
+	left: -50px;
+}
+
+.at-arrowzex-latest-news .at-item-title,
+.at-arrowzex-latest-news a,
+.at-arrowzex-latest-news .at_readmore_text{
+	font-family: Segoe_UI_sb;
+}
+.at-arrowzex-latest-news .at-item-title,
+.at-arrowzex-latest-news a{
+	font-size: 15px;
+	text-align: center;
+	padding: 0 15px;
+}
+.at-arrowzex-latest-news .at-image-intro-item:before {
+	padding-top: 80%;
+	content: "";
+	display: block;
+	margin-bottom: 20px;
+}
+.at-arrowzex-latest-news .at-image-intro-item:hover .at-item-more{
+	background-color: rgba(66,81,90,0.9);
+	opacity: 1;
+}
+.at-arrowzex-latest-news .at-item-more{
+	opacity: 0;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+.at-arrowzex-latest-news .at-published{
+	position: absolute;
+	color: #fff;
+	bottom: 10px;
+	left: 0;
+	display: inline-block;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 4px 20px 4px 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.at-arrowzex-latest-news .at-intro-item-wrap:hover .at-published{
+	padding: 4px 10px 4px 20px;
+}
+.at-arrowzex-latest-news .ch-info-content{
+	text-align: center;
+}
+.at-arrowzex-latest-news .at_readmore_text{
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: lighter;
+	display: inline-block;
+	padding: 3px 15px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: 30px 0;
+}
+.at-arrowzex-latest-news .at_readmore_text:hover{
+	color: #fff;
+}

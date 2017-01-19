@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade">
+    <name>Avatar Articles Nivo</name>
+    <version>1.0.0</version>
+	<creationDate>May 2013</creationDate>
+	<copyright>Amazing-Templates.com</copyright>
+	<license>License GNU General Public License version 2 or later</license>
+	<author>Tran Nam Chung</author>
+	<authorEmail>chungtn2910@gmail.com</authorEmail>
+	<authorUrl>www.amazing-templates.com</authorUrl>
+	<edition>Pro</edition>
+    <description>AVATAR_ARTICLES_NIVO</description>
+    <files>
+        <filename module="mod_avatar_articles_nivo">mod_avatar_articles_nivo.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_avatar_articles_nivo.xml</filename>
+        <filename>helper.php</filename>
+        <filename>defined.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>classes</folder>
+        <folder>fields</folder>
+    </files>
+    <languages>
+		<language tag="en-GB">en-GB.mod_avatar_articles_nivo.ini</language>
+		<language tag="en-GB">en-GB.mod_avatar_articles_nivo.sys.ini</language>
+	</languages>
+    <config>
+    	<fields name="params">
+    		<fieldset name="basic" label="AVATAR_MODULE_SETTING">
+    			<field name="moduleclass_sfx" type="text"  default="" label="AVATAR_SUFFIX" description="" />
+    			<field name="jquery" type="text" default="latest" size="7" label="AVATAR_JQUERY" description="AVATAR_JQUERY_DESC"/>
+    			<field name="width" type="text" default="100%" label="AVATAR_WIDTH" size="2" description="AVATAR_WIDTH_DESC"/>
+    			<field name="copyright" type="radio" default="true" label="AVATAR_COPYRIGHT" description="AVATAR_COPYRIGHT_DESC">	
+					<option value="true">AVATAR_SHOW</option>
+					<option value="false">AVATAR_HIDE</option>
+				</field>
+    		</fieldset>
+    		<fieldset name="source" label="AVATAR_ARTICLES_SETTING">
+    			<field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="AVATAR_ARTICLES_CATEGORY" description="AVATAR_ARTICLES_CATEGORY_DESC" >
+						<option value="">AVATAR_ARTICLES_ALL_CATEGORIES</option>
+				</field>
+				<field name="itemcount" type="text" default="5" label="AVATAR_ARTICLES_COUNT" description="AVATAR_ARTICLES_COUNT_DESC" />
+				<field name="show_featured" type="list" default="" label="AVATAR_ARTICLES_FEATURED" description="AVATAR_ARTICLES_FEATURED_DESC">
+						<option value="">AVATAR_ARTICLES_SHOW</option>
+						<option value="0">AVATAR_ARTICLES_HIDE</option>
+						<option value="1">AVATAR_ARTICLES_ONLY_SHOW_FEATURED</option>
+				</field>
+				<field name="ordering" type="list" default="published" label="AVATAR_ARTICLES_ORDERING" description="AVATAR_ARTICLES_ORDERING_DESC">
+						<option value="c_dsc">AVATAR_ARTICLES_VALUE_RECENT_ADDED</option>
+						<option value="m_dsc">AVATAR_ARTICLES_VALUE_RECENT_MODIFIED</option>
+						<option value="p_dsc">AVATAR_ARTICLES_VALUE_RECENT_PUBLISHED</option>
+						<option value="mc_dsc">AVATAR_ARTICLES_VALUE_RECENT_TOUCHED</option>
+				</field>
+				<field name="itemLink" type="list" default="urlta" label="AVATAR_ARTICLES_LINK" description="AVATAR_ARTICLES_LINK_DESC">
+						<option value="urlta">AVATAR_ARTICLES_LINK_TO_ARTICLE</option>
+						<option value="urla">AVATAR_ARTICLES_LINK_A</option>
+						<option value="urlb">AVATAR_ARTICLES_LINK_B</option>
+						<option value="urlc">AVATAR_ARTICLES_LINK_C</option>
+						<option value="unurlc">AVATAR_ARTICLES_UN_LINK</option>
+				</field>
+				<field name="newTab" type="radio" default="true" label="AVATAR_ARTICLES_NEW_TAB" description="AVATAR_ARTICLES_NEW_TAB_NEW_TAB_DESC">	
+					<option value="true">AVATAR_TRUE</option>
+					<option value="false">AVATAR_FALSE</option>
+				</field>
+				<field name="articleTitle" type="radio" default="true" label="AVATAR_ARTICLES_ARTICLE_TITLE" description="AVATAR_ARTICLES_ARTICLE_TITLE_DESC">	
+					<option value="true">AVATAR_TRUE</option>
+					<option value="false">AVATAR_FALSE</option>
+				</field>
+				<field name="articleIntro" type="radio" default="true" label="AVATAR_ARTICLES_ARTICLE_INTRO" description="AVATAR_ARTICLES_ARTICLE_INTRO_DESC">	
+					<option value="true">AVATAR_TRUE</option>
+					<option value="false">AVATAR_FALSE</option>
+				</field>
+			</fieldset>
+			<fieldset name="slide" label="AVATAR_NIVO_SLIDE_SETTING" addfieldpath="/modules/mod_avatar_articles_nivo/fields">
+				<field name="theme" type="list" default="default" label="AVATAR_NIVO_THEME" description="AVATAR_NIVO_THEME_DESC">
+					<option value="default">AVATAR_NIVO_DEFAULT</option>
+					<option value="bar">AVATAR_NIVO_BAR</option>
+					<option value="dark">AVATAR_NIVO_DARK</option>
+					<option value="light">AVATAR_NIVO_LIGHT</option>
+				</field>
+				<field name="controlNav" type="radio" default="false" label="AVATAR_NIVO_DOTS_NAVIGATION" description="AVATAR_NIVO_DOTS_NAVIGATION_DESC">	
+					<option value="true">AVATAR_SHOW</option>
+					<option value="false">AVATAR_HIDE</option>
+				</field>
+				<field name="autoPlay" type="radio" default="true" label="AVATAR_NIVO_AUTO_PLAY" description="AVATAR_NIVO_AUTO_PLAY_DESC">	
+					<option value="false">AVATAR_TRUE</option>
+					<option value="true">AVATAR_FALSE</option>
+				</field>
+				<field name="randomStart" type="radio" default="true" label="AVATAR_NIVO_RANDOM_START" description="AVATAR_NIVO_RANDOM_START_DESC">	
+					<option value="true">AVATAR_TRUE</option>
+					<option value="false">AVATAR_FALSE</option>
+				</field>
+				<field name="slices" type="text" default="15" label="AVATAR_NIVO_SLICES" size="2" description="AVATAR_NIVO_SLICES_DESC"/>
+    			<field name="boxRows" type="text" default="8" label="AVATAR_NIVO_BOX_ROWS" size="2" description="AVATAR_NIVO_BOX_ROWS_DESC"/>
+    			<field name="animSpeed" type="text" default="400" label="AVATAR_NIVO_ANIMATION_SPEED" size="2" description="AVATAR_NIVO_ANIMATION_SPEED_DESC"/>
+    			<field name="slideTime" type="text" default="4000" label="AVATAR_NIVO_PAUSE_TIME" size="2" description="AVATAR_ARTICLES_PAUSE_TIME_DESC"/>
+    			<field name="transition" type="list" default="random" label="AVATAR_NIVO_EFFECT" multiple="multiple" description="AVATAR_NIVO_EFFECT_DESC" size="7">
+					<option value="random">Random</option>
+					<option value="sliceDownRight">Slice Down Right</option>
+					<option value="sliceDownLeft">Slice Down Left</option>
+					<option value="sliceUpRight">Slice Up Right</option>
+					<option value="sliceUpLeft">Slice Up Left</option>
+					<option value="sliceUpDown">Slice Up Down</option>
+					<option value="sliceUpDownLeft">Slice Up Down Left</option>
+					<option value="fold">Fold</option>
+					<option value="fade">Fade</option>
+					<option value="boxRandom">Box Random</option>
+					<option value="boxRain">Box Rain</option>
+					<option value="boxRainReverse">Box Rain Reverse</option>
+					<option value="boxRainGrow">Box Rain Grow</option>
+					<option value="boxRainGrowReverse">Box Rain Grow Reverse</option>
+				</field>
+			</fieldset>
+    	</fields>	
+    </config>
+</extension>
